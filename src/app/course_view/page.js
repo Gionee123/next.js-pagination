@@ -146,7 +146,7 @@ export default function Course_view() {
                         <nav className="flex gap-[10px]  justify-between md:justify-center items-center ">
                             {/* First Button */}
                             <button
-                                className={`flex items-center justify-centertext-xs px-3 py-1.5 rounded border bg-green-600 text-white border-green-700transition-colors duration-200 ${pageNumber === 1 ? "hidden" : ""
+                                className={`flex  h-[30px] items-center justify-centertext-xs px-3 py-1.5 rounded border bg-green-600 text-white border-green-700transition-colors duration-200 ${pageNumber === 1 ? "hidden" : ""
                                     }`}
                                 title="First Page"
                                 onClick={() => changePageNumber("First")}
@@ -156,17 +156,17 @@ export default function Course_view() {
                             </button>
                             {/* Previous Button */}
 
-                            <button className={`flex items-center justify-centertext-xs px-3 py-1.5 rounded border bg-green-600 text-white border-green-700transition-colors duration-200 ${pageNumber === 1 ? "hidden" : ""
+                            <button className={`flex  h-[30px] items-center justify-centertext-xs px-3 py-1.5 rounded border bg-green-600 text-white border-green-700transition-colors duration-200 ${pageNumber === 1 || pageNumber === 2 ? "hidden" : ""
                                 }`}
                                 title="Previous Page"
                                 onClick={() => changePageNumber("Previous")}
-                                disabled={pageNumber === 1}
+                                disabled={pageNumber === 1 || pageNumber === 2}
                             >
                                 Previous
                             </button>
                             {/* Next Button */}
                             <button
-                                className={`flex items-center justify-center text-xs px-3 py-1.5 rounded border bg-green-600 text-white border-green-700 transition-colors duration-200 ${pageNumber === Math.ceil(totalLen / limit)
+                                className={`flex  h-[30px] items-center justify-center text-xs px-3 py-1.5 rounded border bg-green-600 text-white border-green-700 transition-colors duration-200 ${pageNumber === Math.ceil(totalLen / limit)
                                     ? "hidden" : ""}`}
                                 title="Next Page"
                                 onClick={() => changePageNumber("Next")}
@@ -177,7 +177,7 @@ export default function Course_view() {
 
                             {/* Last Button */}
                             <button
-                                className={`flex items-center justify-centertext-xs px-3 py-1.5 rounded border bg-green-600 text-white border-green-700transition-colors duration-200 ${pageNumber === Math.ceil(totalLen / limit) ? "hidden" : ""
+                                className={`flex  h-[30px] items-center justify-centertext-xs px-3 py-1.5 rounded border bg-green-600 text-white border-green-700transition-colors duration-200 ${pageNumber === Math.ceil(totalLen / limit) ? "hidden" : ""
                                     }`}
                                 title="Last Page"
                                 onClick={() => changePageNumber("Last")}
